@@ -2,54 +2,22 @@
 {{-- HEADER --}}
 @include('components.header')
 
-<body>
+<body class="body" style="background-color: #F1F5F9;">
     <!-- Layout wrapper -->
-    <div class="">
-        <div class="">
-          <!-- Menu -->
+    <div class="layout-wrapper">
+        <!-- Floating Sidebar -->
+        @include('components.sidebar')
 
-          {{-- SIDEBAR --}}
-          @include('components.sidebar')
-          <!-- / Menu -->
+        <!-- Floating Navbar -->
+        @include('components.navbar')
 
-          <!-- Layout container -->
-          <div class="">
-
-            <!-- Navbar -->
-            @include('components.navbar')
-            <!-- / Navbar -->
-
-            <!-- Content wrapper -->
-            <div class="">
-
-              <!-- Content -->
-              <div class="container-xxl flex-grow-1 container-p-y">
-                @yield('content')
-              </div>
-              <!-- / Content -->
-
-              <!-- Footer -->
-              {{-- @include('components.footer') --}}
-              <!-- / Footer -->
-
-              <div class="content-backdrop fade"></div>
-            </div>
-            <!-- Content wrapper -->
-          </div>
-          <!-- / Layout page -->
+        <!-- Content wrapper -->
+        <div class="content-wrapper">
+            @yield('content')
         </div>
-
-        <!-- Overlay -->
-        <div class="layout-overlay layout-menu-toggle"></div>
-
-        <!-- Drag Target Area To SlideIn Menu On Small Screens -->
-        <div class="drag-target"></div>
-      </div>
-    <!--/ Layout wrapper -->
+    </div>
 
     @vite('resources/js/app.js')
-
-
     @include('components.scripts')
     @yield('components.specific_page_scripts')
 </body>

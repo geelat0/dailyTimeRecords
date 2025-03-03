@@ -1,0 +1,46 @@
+/* Floating Sidebar */
+.floating-sidebar {
+    position: fixed;
+    top: 104px; /* Below navbar */
+    left: 17px; /* Floating effect */
+    width: 138px;
+    height: calc(100vh - 80px); /* Full height minus navbar height */
+    background: white;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+    border-radius: 8px;
+    padding: 20px 10px 10px 10px;
+    z-index: 999;
+    border: 1px solid #dfdfdf;
+}
+
+/* Sidebar Links */
+.floating-sidebar .nav-link {
+    color: #333;
+    font-weight: 500;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+.floating-sidebar .nav-link:hover {
+    background-color: #f8f9fa;
+}
+
+/* Main Content */
+.content {
+    margin-left: 260px; /* Space for sidebar */
+    padding: 20px;
+}
+
+.btn-sidebar{
+    font-size: 12px;
+    color: #333;
+    font-weight: normal;
+}
+
+.btn-sidebar:hover{
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+
+}
